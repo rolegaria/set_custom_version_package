@@ -9778,9 +9778,11 @@ const core = __nccwpck_require__(8021);
 const github = __nccwpck_require__(4366);
 
 try {
-  const nameToGreet = core.getInput('who-to-greet');
-  console.log(`Hello ${nameToGreet}`);
+  const current_version = core.getInput('current-version');
+  const level_of_change = core.getInput('level-of-change');
 
+  let version = current_version.split('.');
+  console.log(version)
   const time = new Date().toTimeString();
 
   core.setOutput('time', time);
