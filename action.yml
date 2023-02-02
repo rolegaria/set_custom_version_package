@@ -1,13 +1,16 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Set package version'
+description: 'Returns the next version according to the level of change'
 inputs:
-  who-to-greet: # id of input
-    description: 'Who to greet'
+  current-version: 
+    description: 'Current version'
     required: true
-    default: 'World'
+    default: '1.0.0'
+  level-of-change:
+    description: 'Level of change'
+    required: true    
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  next-version: 
+    description: 'Next version'
 runs:
   using: 'node12'
   main: 'dist/index.js'
