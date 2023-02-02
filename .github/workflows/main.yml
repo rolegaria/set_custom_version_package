@@ -13,7 +13,8 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: hello
         with:
-          who-to-greet: 'Rupesh Tiwari'
+          current-version: '1.2.3'
+          level-of-change: 'major'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was $"
