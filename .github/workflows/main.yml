@@ -17,4 +17,4 @@ jobs:
           level-of-change: 'major'
       # Use the output from the `hello` step
       - name: Get the output time
-        run: echo "The time was $"
+        run: echo "The time was ${{steps.hello.outputs.next-version}}"
