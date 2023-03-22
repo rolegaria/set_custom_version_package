@@ -4,7 +4,7 @@ inputs:
   current-version: 
     description: 'Current version'
     required: true
-    default: '1.0.0'
+    default: '0.0.0'
   level-of-change:
     description: 'Level of change'
     required: true    
