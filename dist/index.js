@@ -2823,6 +2823,7 @@ try {
   const current_version = core.getInput("current-version");
   const level_of_change = core.getInput("level-of-change");
   const increment = 1;
+  const array = ["major", "new"];
 
   let version = current_version.split(".");
 
@@ -2830,7 +2831,7 @@ try {
     version[2] = parseInt(version[2]) + increment;
   else if (level_of_change == "minor")
     version[1] = parseInt(version[1]) + increment;
-  else if (level_of_change == "major")
+  else if (array.includes(level_of_change))
     version[0] = parseInt(version[0]) + increment;
   else 
     core.setFailed("Invalid level of change");
