@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
+        uses: rolegaria/set_custom_version_package@v2.2 # Uses an action in the root directory
         id: hello
         with:
           current-version: '1.2.3'
